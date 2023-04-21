@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "madefor_regular";
+    src: url(../fonts/madefor/WixMadeforDisplay-Regular-BF63eaef069cab3.otf);
+}
+
+:root{
+    --primary-color: #010101;
+    --secondary-color: #003752;
+    --terciary-color: #011D53;
+    --text-primary: #FFFFFF;
+    --text-secondary: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "madefor_regular";
+    box-sizing: border-box;
+    color: var(--text-primary);
+}
+
+body{
+    background-image: linear-gradient(to right top, var(--primary-color), var(--secondary-color), var(--terciary-color));
+    background-attachment: fixed; /* O background se mantém */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    gap: 3%;
+    align-items: start;
+}
+
+.pesq_e_info{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    border-radius: 0.2rem;
+    min-width: 30rem;
+    padding: 1.8rem;
+    box-shadow: 2px 2px 20px black;
+}
+
+.pesq{
+    display: flex;
+    justify-content: center;
+}
+
+.pesq input{
+    width: 58%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: var(--text-secondary);
+    background-color: var(--text-primary);
+    border-radius: 1px 0 0 1px;
+}
+
+.pesq i{
+    background-color: var(--text-primary);
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: 0.3s;
+    color: var(--text-secondary);
+    border-radius: 0 1px 1px 0;
+}
+
+.pesq i:hover{
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+/* Loading */
+
+div.cont_loading{
+    margin-top: 1.8rem;
+    font-size: 1.7rem;
+    text-align: center;
+    display: none;
+}
+
+/* Fim Loading */
+
+/* Mensagem de erro */
+
+.error_message {
+    margin-top: 0.9rem;
+    padding-top: 0.4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+    border-top: 1px solid #FFF;
+    display: none;
+}
+
+/* Fim da mensagem de erro */
+
+.dates{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+    display: none;
+}
+
+.local{
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin-bottom: 1rem;
+}
+
+.temp img{
+    height: 70px;
+}
+
+.temp h2{
+    font-size: 2.7rem;
+}
+
+.descrip_temp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description span{
+    text-transform: capitalize;
+}
+
+.vent_umid{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.info_vent_umid{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.info_vent_umid{
+    border-bottom: 1px solid #FFF;
+    align-items: center;
+}
+
+/* Slide Noticias */
+
+.slide_noticias{
+    height: 500px;
+    width: 1000px;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px black;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+}
+
+.slider input {
+    display: none;
+}
+
+.img_slide{
+    width: 25%;
+}
+
+/* Criar buttons p/ o slide */
+
+.labels_slide{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.labels_slide label{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.labels_slide label:hover{
+    background-color: #FFF;
+}
+
+.labels_slide label:not(last-child){
+    margin-right: 1rem;
+}
+
+/* Tratando os radios */
+
+.first{
+    transition: ease-in-out 0.5s;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+/* Quando for informado a localidade */
+
+.aparecer{
+    display: inherit;
+}
+
+.aparecer_block{
+    display: block !important;
+}
+
+.crescer{
+    align-items: normal;
+}

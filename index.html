@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="js/script.js" defer></script>
+        <script src="js/slide.js" defer></script>
+        <title>Tempo em Tempo</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="pesq_e_info">
+                <div class="pesq">
+                    <input type="text" placeholder="Pesquise uma localidade...">
+                    <i class="fa-solid fa-magnifying-glass" id="btnPesq"></i>
+                </div>
+
+                <!-- Carregamento -->
+                <div class="cont_loading">
+                    <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+                </div>
+                <!-- Fim carregamento -->
+
+                <!--Mensagem ERRO-->
+                <div class="error_message">
+                    <p>Localidade não encontrada. Tente novamente!</p>
+                </div>
+                <!--FIM Mensagem ERRO-->
+                <div class="dates">
+                    <div class="local">
+                        <p>Tempo agora em</p>
+                        <p id="locCity"></p>
+                    </div>
+                    
+                    <div class="temp">
+                        <img src="" alt="">
+                        <h2></h2>
+                    </div>
+                    <div class="descrip_temp">
+                        <p class="description"><i class="fa-solid fa-cloud"></i><span></span></p>
+                        <p class="temp_max"><i class="fa-solid fa-temperature-arrow-up"></i><span></span></p>
+                        <p class="temp_min"><i class="fa-solid fa-temperature-arrow-down"></i><span></span></p>
+                    </div>
+                    <div class="vent_umid">
+                        <div class="info_vent_umid">
+                            <div>Vento</div>
+                            <span id="vel_vento"></span>
+                        </div>
+                        <div class="info_vent_umid">
+                            <div>Umidade</div>
+                            <span id="umid"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide_noticias">
+                <div class="slider">
+                    <input type="radio" name="input_slide" id="radio1" class="input_slide">
+                    <input type="radio" name="input_slide" id="radio2" class="input_slide">
+                    <input type="radio" name="input_slide" id="radio3" class="input_slide">
+                    <input type="radio" name="input_slide" id="radio4" class="input_slide">
+                    <!--  Imagens para o slide  -->
+                    <div class="img_slide first">
+                        <img src="imagens/img1-1000.jpg" alt="">
+                    </div>
+                    <div class="img_slide">
+                        <img src="imagens/img2-1000.jpg" alt="">
+                    </div>
+                    <div class="img_slide">
+                        <img src="imagens/img3-full.jpg" alt="">
+                    </div>
+                    <div class="img_slide">
+                        <img src="imagens/img4-1000.jpg" alt="">
+                    </div>
+                </div>
+                
+                <div class="labels_slide">
+                    <label for="radio1"></label>
+                    <label for="radio2"></label>
+                    <label for="radio3"></label>
+                    <label for="radio4"></label>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
